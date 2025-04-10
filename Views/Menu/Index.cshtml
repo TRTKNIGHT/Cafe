@@ -1,0 +1,258 @@
+﻿@model ProductsData
+@{
+    ViewData["Title"] = "Menu - CoffeeZhen";
+}
+
+
+<div class="container-fluid mt-3">
+    <div class="d-flex align-items-center justify-content-around gap-sm-3">
+        <div class="d-flex align-items-center">
+            <a class="contact-link" href="#">Instaragm Link</a>
+        </div>
+        <div class="d-flex align-items-center">
+            <i class="fa-regular fa-heart"></i>
+        </div>
+        <div class="d-flex align-items-center">
+            <a href="#">Telegram Link</a>
+        </div>
+    </div>
+    <nav class="nav nav-pills nav-fill scroll-section mb-3">
+        <div class="btn nav-toggler d-flex flex-column nav-item align-items-center"
+        role="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#coffee">
+            <i class="fas fa-coffee"></i>
+            <span class="d-sm-inline">قهوه</span>
+        </div>
+        <div class="btn nav-toggler d-flex flex-column nav-item align-items-center"
+        role="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#hotDrinks">
+            <i class="fas fa-mug-hot"></i>
+            <span class="d-sm-inline">گرم نوش</span>
+        </div>
+        <div class="btn nav-toggler d-flex flex-column nav-item align-items-center"
+        role="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#exirs">
+            <i class="fas fa-leaf"></i>
+            <span class="d-sm-inline">دمنوش</span>
+        </div>
+        <div class="btn nav-toggler d-flex flex-column nav-item align-items-center"
+        role="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#snacks">
+            <i class="fas fa-cookie"></i>
+            <span class="d-sm-inline">میان وعده</span>
+        </div>
+        <div class="btn nav-toggler d-flex flex-column nav-item align-items-center"
+        role="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#shakesAndIceCreams">
+            <i class="fas fa-ice-cream"></i>
+            <span class="d-sm-inline">شیک و بستنی</span>
+        </div>
+        <div class="btn nav-toggler d-flex flex-column nav-item align-items-center"
+        role="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mocktales">
+            <i class="fas fa-cocktail"></i>
+            <span class="d-sm-inline">ماکتل</span>
+        </div>
+        <div class="btn nav-toggler d-flex flex-column nav-item align-items-center"
+        role="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#punches">
+            <i class="fas fa-wine-glass-alt"></i>
+            <span class="d-sm-inline">پانچ</span>
+        </div>
+        <div class="btn nav-toggler d-flex flex-column nav-item align-items-center"
+        role="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#smothies">
+            <i class="fas fa-blender"></i>
+            <span class="d-sm-inline">اسموتی</span>
+        </div>
+    </nav>
+    <div class="collapse" id="coffee">
+        @foreach (var item in Model.Coffees) {
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-5 col-md-3 image-container">
+                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
+                    </div>
+                    <div class="col-7 col-md-9" style="position: relative">
+                        <div class="card-body">
+                            <div class="d-flex flex-column item-price">
+                                <h6 class="card-title">@item.Name</h6>
+                                <h6 class="card-title">@item.Price</h6>
+                                @if (!string.IsNullOrEmpty(item.SecondPrice))
+                                {
+                                    <h6 class="card-title">@item.SecondPrice</h6>
+                                }
+                                @if (!string.IsNullOrEmpty(item.Description))
+                                {
+                                    <h6 class="card-title desc-container pb-2 px-0" style="font-size: 0.8rem">@item.Description</h6>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="collapse" id="hotDrinks">
+        @foreach (var item in Model.HotDrinks)
+        {
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-5 col-md-3 image-container">
+                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
+                    </div>
+                    <div class="col-7 col-md-9" style="position: relative">
+                        <div class="card-body">
+                            <div class="d-flex flex-column justify-content-between item-price">
+                                <h6 class="card-title">@item.Name</h6>
+                                <h6 class="card-title">@item.Price</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="collapse" id="exirs">
+        @foreach (var item in Model.Exirs)
+        {
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-5 col-md-3 image-container">
+                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
+                    </div>
+                    <div class="col-7 col-md-9" style="position: relative">
+                        <div class="card-body">
+                            <div class="d-flex flex-column justify-content-between item-price">
+                                <h6 class="card-title">@item.Name</h6>
+                                <h6 class="card-title">@item.Price</h6>
+                            </div>
+                            @if (!string.IsNullOrEmpty(item.Description))
+                            {
+                                <h6 class="card-title desc-container pb-2 px-0" style="font-size: 0.8rem;">@item.Description</h6>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="collapse" id="snacks">
+        @foreach (var item in Model.Snacks)
+        {
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-5 col-md-3 image-container">
+                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
+                    </div>
+                    <div class="col-7 col-md-9" style="position: relative">
+                        <div class="card-body">
+                            <div class="d-flex flex-column justify-content-between item-price">
+                                <h6 class="card-title">@item.Name</h6>
+                                <h6 class="card-title">@item.Price</h6>
+                            </div>
+                            @if (!string.IsNullOrEmpty(item.Description))
+                            {
+                                <h6 class="desc-container pb-2 px-0" style="font-size: 0.8rem">@item.Description</h6>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="collapse" id="shakesAndIceCreams">
+        @foreach (var item in Model.ShakesAndIceCreams)
+        {
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-5 col-md-3 image-container">
+                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
+                    </div>
+                    <div class="col-7 col-md-9" style="position: relative">
+                        <div class="card-body">
+                            <div class="d-flex flex-column justify-content-between item-price">
+                                <h6 class="card-title">@item.Name</h6>
+                                <h6 class="card-title">@item.Price</h6>
+                            </div>
+                            @if (!string.IsNullOrEmpty(item.Description))
+                            {
+                                <h6 class="desc-container pb-2 px-0" style="font-size: 0.8rem">@item.Description</h6>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="collapse" id="mocktales">
+        @foreach (var item in Model.Mocktales)
+        {
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-5 col-md-3 image-container">
+                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
+                    </div>
+                    <div class="col-7 col-md-9" style="position: relative">
+                        <div class="card-body">
+                            <div class="d-flex flex-column justify-content-between item-price">
+                                <h6 class="card-title">@item.Name</h6>
+                                <h6 class="card-title">@item.Price</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="collapse" id="punches">
+        @foreach (var item in Model.Punches)
+        {
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-5 col-md-3 image-container">
+                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
+                    </div>
+                    <div class="col-7 col-md-9" style="position: relative">
+                        <div class="card-body">
+                            <div class="d-flex flex-column justify-content-between item-price">
+                                <h6 class="card-title">@item.Name</h6>
+                                <h6 class="card-title">@item.Price</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="collapse" id="smothies">
+        @foreach (var item in Model.Smothies)
+        {
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-5 col-md-3 image-container">
+                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
+                    </div>
+                    <div class="col-7 col-md-9" style="position: relative">
+                        <div class="card-body">
+                            <div class="d-flex flex-column justify-content-between item-price">
+                                <h6 class="card-title">@item.Name</h6>
+                                <h6 class="card-title">@item.Price</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
