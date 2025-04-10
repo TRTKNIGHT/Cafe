@@ -26,8 +26,8 @@ body .footer-wrapper {
 
 .footer-wrapper footer {
     display: flex;
-    align-items: center; /* centers vertically */
-    justify-content: center; /* centers horizontally */
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     margin: 0;
