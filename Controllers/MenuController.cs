@@ -14,12 +14,6 @@ namespace Kafe.Controllers
         }
 
         [HttpGet("/")]
-        public IActionResult Welcome()
-        {
-            return View();
-        }
-
-        [HttpGet("/items")]
         public IActionResult Index()
         {
             return View(_products);

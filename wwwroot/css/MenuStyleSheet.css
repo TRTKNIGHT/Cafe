@@ -38,6 +38,11 @@ footer h4 {
     margin: 0;
 }
 
+.nav-pills {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
 a {
     color: #f8f6f0;
 }
@@ -79,6 +84,11 @@ i.fa-heart {
   align-items: center;
   justify-content: center;
   transition: height 0.35s ease;
+}
+
+.row .card-img {
+    transform-origin: 20% 0;
+    width: 100%;
 }
 
 .img-container img {
@@ -185,8 +195,8 @@ i.fa-heart {
     height: 100%;
     display: flex;
     flex-direction: column;
+    padding-top: 0;
     padding: 0.8rem;
-    padding-right: 0;
     min-width: 0;
     margin-bottom: 0;
 }
@@ -199,10 +209,6 @@ i.fa-heart {
     letter-spacing: normal;
 }
 
-.card .image-container img {
-    height: 100%;
-}
-
 .row .col-8 {
     padding-right: 0;
     padding-left: 10px;
@@ -211,7 +217,6 @@ i.fa-heart {
 .card-header {
     background-color: #2e2e2e;
     padding-top: 1%;
-    padding-left: 1%;
     padding-right: 1%;
     margin: 0;
 }
@@ -242,7 +247,8 @@ i.fa-heart {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 30px;
+    padding: 0.8rem;
+    padding-bottom: 0;
 }
 
 .desc-container {
@@ -260,6 +266,10 @@ i.fa-heart {
 }
 
 @media (max-width: 1200px) {
+    .row {
+        height: 200px;
+    }
+    
   .image-container img {
     margin-left: 15px;
     padding: 12px;
@@ -276,10 +286,21 @@ i.fa-heart {
 }
 
 @media (max-width: 992px) {
+    .row {
+        height: 200px;
+    }
   .image-container img {
     margin-left: 10px;
     padding: 10px;
   }
+
+  .desc-container {
+      font-size: 1.2rem;
+  }
+
+    .nav-pills .nav-toggler {
+        min-width: 20%;
+    }
 
   h6.card-title {
       margin-bottom: 60px;
@@ -307,7 +328,12 @@ i.fa-heart {
   h6.desc-container {
       font-size: 0.8rem;
       margin-bottom: 0;
+      color: #000000;
   }
+
+    .nav-pills .nav-toggler {
+        min-width: 35%;
+    }
 
   h6.desc-container.pb-2.px-0 {
   max-width: 100%;
@@ -316,9 +342,7 @@ i.fa-heart {
 }
 
   .card .card-body {
-    padding: 0.8rem;
-    padding-bottom: 0;
-    padding-right: 0;
+    padding: 0;
     margin-bottom: 0.5rem;
     min-width: 0;
   }
@@ -334,6 +358,7 @@ i.fa-heart {
 
   .item-price {
       padding-left: 15px;
+      padding-bottom: 0;
   }
 }
 
@@ -343,12 +368,14 @@ i.fa-heart {
   }
 
   .card .card-body {
-    padding: 0.8rem;
-    padding-bottom: 0;
-    padding-right: 0;
+    padding: 0;
     margin-bottom: 0.5rem;
     min-width: 0;
   }
+
+    .nav-pills .nav-toggler {
+        min-width: 30%;
+    }
 
   h6.card-title {
       font-size: 0.8rem;
@@ -384,5 +411,6 @@ i.fa-heart {
 
   .item-price {
       padding-left: 9px;
+      padding-bottom: 0;
   }
 }

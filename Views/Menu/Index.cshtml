@@ -15,7 +15,7 @@
             <i class="fa-regular fa-heart"></i>
         </div>
     </div>
-    <nav class="nav nav-pills nav-fill scroll-section mb-3">
+    <nav class="nav nav-pills nav-fill nav-justified scroll-section mb-3">
         <div class="btn nav-toggler d-flex flex-column nav-item align-items-center"
         role="button"
         data-bs-toggle="collapse"
@@ -77,23 +77,19 @@
         @foreach (var item in Model.Coffees) {
             <div class="card mb-3">
                 <div class="row">
-                    <div class="col-5 col-md-3 image-container">
-                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
-                    </div>
-                    <div class="col-7 col-md-9" style="position: relative">
-                        <div class="card-body">
-                            <div class="d-flex flex-column item-price">
-                                <h6 class="card-title">@item.Name</h6>
-                                <h6 class="card-title">@item.Price</h6>
-                                @if (!string.IsNullOrEmpty(item.SecondPrice))
-                                {
-                                    <h6 class="card-title">@item.SecondPrice</h6>
-                                }
-                                @if (!string.IsNullOrEmpty(item.Description))
-                                {
-                                    <h6 class="card-title desc-container pb-2 px-0" style="font-size: 0.8rem">@item.Description</h6>
-                                }
-                            </div>
+                    <img src="~/images/coffees.jpg" class="card-img" style="background-size: contain; background-attachment: fixed; filter: blur(6px); background-position: top; transform: scale(1.4); overflow: hidden;" />
+                    <div class="card-img-overlay card-body">
+                        <div class="d-flex flex-column item-price">
+                            <h6 class="card-title">@item.Name</h6>
+                            <h6 class="card-title">@item.Price</h6>
+                            @if (!string.IsNullOrEmpty(item.SecondPrice))
+                            {
+                                <h6 class="card-title">@item.SecondPrice</h6>
+                            }
+                            @if (!string.IsNullOrEmpty(item.Description))
+                            {
+                                <h6 class="card-title desc-container pb-2 px-0" style="font-size: 0.95rem;">@item.Description</h6>
+                            }
                         </div>
                     </div>
                 </div>
@@ -104,39 +100,31 @@
         @foreach (var item in Model.HotDrinks)
         {
             <div class="card mb-3">
-                <div class="row g-0">
-                    <div class="col-5 col-md-3 image-container">
-                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
-                    </div>
-                    <div class="col-7 col-md-9" style="position: relative">
-                        <div class="card-body">
-                            <div class="d-flex flex-column justify-content-between item-price">
-                                <h6 class="card-title">@item.Name</h6>
-                                <h6 class="card-title">@item.Price</h6>
-                            </div>
+                <div class="row" style="overflow: hidden;">
+                    <img src="~/images/hotdrinks.jpg" class="card-img" style="background-size: cover; background-attachment: fixed; filter: blur(6px); background-position: top; transform-origin: 0% 50% ;transform: scale(1.4); overflow: hidden;" />
+                    <div class="card-img-overlay card-body">
+                        <div class="d-flex flex-column justify-content-between item-price">
+                            <h6 class="card-title" style="color: #000000">@item.Name</h6>
+                            <h6 class="card-title" style="color: #000000">@item.Price</h6>
                         </div>
                     </div>
+                    </div>
                 </div>
-            </div>
         }
     </div>
     <div class="collapse" id="exirs">
         @foreach (var item in Model.Exirs)
         {
             <div class="card mb-3">
-                <div class="row g-0">
-                    <div class="col-5 col-md-3 image-container">
-                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
-                    </div>
-                    <div class="col-7 col-md-9" style="position: relative">
-                        <div class="card-body">
-                            <div class="d-flex flex-column justify-content-between item-price">
-                                <h6 class="card-title">@item.Name</h6>
-                                <h6 class="card-title">@item.Price</h6>
-                            </div>
+                <div class="row">
+                    <img src="~/images/exirs.jpg" class="card-img" style="background-size: cover; background-attachment: fixed; filter: blur(3px); background-position: top; transform-origin: top ; transform: scale(1.4); overflow: hidden;">
+                    <div class="card-body card-img-overlay">
+                        <div class="d-flex flex-column justify-content-between item-price">
+                            <h6 class="card-title">@item.Name</h6>
+                            <h6 class="card-title">@item.Price</h6>
                             @if (!string.IsNullOrEmpty(item.Description))
                             {
-                                <h6 class="card-title desc-container pb-2 px-0" style="font-size: 0.8rem;">@item.Description</h6>
+                                <h6 class="card-title desc-container pb-2 px-0" style="font-size: 0.95rem;">@item.Description</h6>
                             }
                         </div>
                     </div>
@@ -148,16 +136,12 @@
         @foreach (var item in Model.Snacks)
         {
             <div class="card mb-3">
-                <div class="row g-0">
-                    <div class="col-5 col-md-3 image-container">
-                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
-                    </div>
-                    <div class="col-7 col-md-9" style="position: relative">
-                        <div class="card-body">
-                            <div class="d-flex flex-column justify-content-between item-price">
-                                <h6 class="card-title">@item.Name</h6>
-                                <h6 class="card-title">@item.Price</h6>
-                            </div>
+                <div class="row">
+                    <img src="~/images/snacks.jpg" class="card-img" style="background-size: cover; background-attachment: fixed; filter: blur(3px); background-position: left; transform: scale(1.45); overflow: hidden;">
+                    <div class="card-body card-img-overlay">
+                        <div class="d-flex flex-column justify-content-between item-price">
+                            <h6 class="card-title" style="color: #000000;">@item.Name</h6>
+                            <h6 class="card-title" style="color: #000000">@item.Price</h6>
                             @if (!string.IsNullOrEmpty(item.Description))
                             {
                                 <h6 class="desc-container pb-2 px-0" style="font-size: 0.8rem">@item.Description</h6>
@@ -172,19 +156,15 @@
         @foreach (var item in Model.ShakesAndIceCreams)
         {
             <div class="card mb-3">
-                <div class="row g-0">
-                    <div class="col-5 col-md-3 image-container">
-                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
-                    </div>
-                    <div class="col-7 col-md-9" style="position: relative">
-                        <div class="card-body">
-                            <div class="d-flex flex-column justify-content-between item-price">
-                                <h6 class="card-title">@item.Name</h6>
-                                <h6 class="card-title">@item.Price</h6>
-                            </div>
+                <div class="row">
+                    <img src="~/images/shakesandincecreams.jpg" class="card-img" style="background-size: cover; background-attachment: fixed; filter: blur(2px); transform-origin: center; transform: scale(1.45); overflow: hidden;">
+                    <div class="card-body card-img-overlay">
+                        <div class="d-flex flex-column justify-content-between item-price">
+                            <h6 class="card-title">@item.Name</h6>
+                            <h6 class="card-title">@item.Price</h6>
                             @if (!string.IsNullOrEmpty(item.Description))
                             {
-                                <h6 class="desc-container pb-2 px-0" style="font-size: 0.8rem">@item.Description</h6>
+                                <h6 class="desc-container pb-2 px-0" style="font-size: 0.95rem; color: #000000;">@item.Description</h6>
                             }
                         </div>
                     </div>
@@ -196,16 +176,12 @@
         @foreach (var item in Model.Mocktales)
         {
             <div class="card mb-3">
-                <div class="row g-0">
-                    <div class="col-5 col-md-3 image-container">
-                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
-                    </div>
-                    <div class="col-7 col-md-9" style="position: relative">
-                        <div class="card-body">
-                            <div class="d-flex flex-column justify-content-between item-price">
-                                <h6 class="card-title">@item.Name</h6>
-                                <h6 class="card-title">@item.Price</h6>
-                            </div>
+                <div class="row">
+                    <img src="~/images/mocktales.jpg" class="card-img" style="background-size: cover; background-attachment: fixed; filter: blur(2px); background-position: left; transform-origin: 0% 80%; transform: scale(1.45); overflow: hidden;">
+                    <div class="card-body card-img-overlay">
+                        <div class="d-flex flex-column justify-content-between item-price">
+                            <h6 class="card-title">@item.Name</h6>
+                            <h6 class="card-title" style="color: #000000">@item.Price</h6>
                         </div>
                     </div>
                 </div>
@@ -217,15 +193,11 @@
         {
             <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col-5 col-md-3 image-container">
-                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
-                    </div>
-                    <div class="col-7 col-md-9" style="position: relative">
-                        <div class="card-body">
-                            <div class="d-flex flex-column justify-content-between item-price">
-                                <h6 class="card-title">@item.Name</h6>
-                                <h6 class="card-title">@item.Price</h6>
-                            </div>
+                    <img src="~/images/punches.jpg" class="card-img" style="background-size: cover; background-attachment: fixed; filter: blur(2px); background-position: left; transform-origin: 50% 15%; transform: scale(1.45); overflow: hidden;">
+                    <div class="card-body card-img-overlay">
+                        <div class="d-flex flex-column justify-content-between item-price">
+                            <h6 class="card-title">@item.Name</h6>
+                            <h6 class="card-title">@item.Price</h6>
                         </div>
                     </div>
                 </div>
@@ -237,15 +209,11 @@
         {
             <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col-5 col-md-3 image-container">
-                        <img src="https://tse4.mm.bing.net/th?id=OIG2.UPHt2djgtahPZRLMAK26&pid=ImgGn" class="img-fluid rounded-start" />
-                    </div>
-                    <div class="col-7 col-md-9" style="position: relative">
-                        <div class="card-body">
-                            <div class="d-flex flex-column justify-content-between item-price">
-                                <h6 class="card-title">@item.Name</h6>
-                                <h6 class="card-title">@item.Price</h6>
-                            </div>
+                    <img src="~/images/smothies.jpg" class="card-img" style="background-size: cover; background-attachment: fixed; filter: blur(4px); background-position: left; transform-origin: 50% 25%; transform: scale(1.45); overflow: hidden;">
+                    <div class="card-body card-img-overlay">
+                        <div class="d-flex flex-column justify-content-between item-price">
+                            <h6 class="card-title" style="color: #000000;">@item.Name</h6>
+                            <h6 class="card-title">@item.Price</h6>
                         </div>
                     </div>
                 </div>

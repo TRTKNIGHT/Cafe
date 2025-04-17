@@ -1,4 +1,7 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
+    const coffeeCollapse = document.getElementById('coffee');
+    coffeeCollapse.classList.add('show');
+
     const togglers = document.querySelectorAll('.nav-toggler');
     const collapsibles = document.querySelectorAll('.collapse');
     const logo = document.getElementById('logo');
