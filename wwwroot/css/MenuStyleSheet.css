@@ -186,9 +186,9 @@ i.fa-heart {
     display: flex;
     flex-direction: column;
     padding: 0.8rem;
-    padding-right: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     min-width: 0;
-    margin-bottom: 0;
 }
 
 .card .card-title {
@@ -242,7 +242,6 @@ i.fa-heart {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 30px;
 }
 
 .desc-container {
@@ -268,10 +267,6 @@ i.fa-heart {
   h6.card-title {
       gap: normal;
       margin-bottom: 50px;
-  }
-
-  .item-price {
-      padding-left: 30px;
   }
 }
 
@@ -317,9 +312,8 @@ i.fa-heart {
 
   .card .card-body {
     padding: 0.8rem;
-    padding-bottom: 0;
-    padding-right: 0;
-    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     min-width: 0;
   }
 
@@ -331,10 +325,6 @@ i.fa-heart {
     margin-left: 5px;
     padding: 8px;
   }
-
-  .item-price {
-      padding-left: 15px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -344,9 +334,8 @@ i.fa-heart {
 
   .card .card-body {
     padding: 0.8rem;
-    padding-bottom: 0;
-    padding-right: 0;
-    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     min-width: 0;
   }
 
@@ -380,9 +369,5 @@ i.fa-heart {
   .image-container img {
     margin-left: 2px;
     padding: 0;
-  }
-
-  .item-price {
-      padding-left: 9px;
   }
 }
