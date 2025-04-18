@@ -38,6 +38,11 @@ footer h4 {
     margin: 0;
 }
 
+.nav-pills {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
 a {
     color: #f8f6f0;
 }
@@ -268,6 +273,7 @@ i.fa-heart {
       gap: normal;
       margin-bottom: 50px;
   }
+
 }
 
 @media (max-width: 992px) {
@@ -282,6 +288,10 @@ i.fa-heart {
 
   .item-price {
       padding-left: 22px;
+  }
+
+  .nav-pills .nav-togller {
+      min-width: 20%;
   }
 }
 
@@ -324,6 +334,10 @@ i.fa-heart {
   .image-container img {
     margin-left: 5px;
     padding: 8px;
+  }
+
+  .nav-pills .nav-toggler {
+      min-width: 30%;
   }
 }
 
@@ -369,5 +383,9 @@ i.fa-heart {
   .image-container img {
     margin-left: 2px;
     padding: 0;
+  }
+
+  .nav-pills .nav-toggler {
+      min-width: 35%;
   }
 }
