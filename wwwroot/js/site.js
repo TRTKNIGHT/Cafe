@@ -4,28 +4,53 @@
     coffee.classList.add('show');
     coffeeBtn.classList.add('active');
 
-
-    const body = document.body;
-    body.style.setProperty('--bg-image', 'url("/images/coffees.jpg")');
-    body.classList.add('has-bg');
+    function shuffleImage() {
+        const hotdrinks = document.getElementById('hotDrinksBtn');
+        const exirs = document.getElementById('exirsBtn');
+        const snacks = document.getElementById('snacksBtn');
+        const shakesAndIceCreams = document.getElementById('shakesAndIceCreamsBtn');
+        const mocktales = document.getElementById('mocktalesBtn');
+        const punches = document.getElementById('punchesBtn');
+        const smothies = document.getElementById('smothiesBtn');
+        if (coffeeBtn.classList.contains('active')) {
+            document.body.style.backgroundImage = "url('/images/coffees.jpg')";
+        }
+        else if (hotdrinks.classList.contains('active')) {
+            document.body.style.backgroundImage = "url('/images/hotdrinks.jpg')";
+            document.querySelector('a').style.color = '#0d0d0d';
+            document.querySelector('.fa-instagram').style.color = '#0d0d0d';
+        }
+        else if (exirs.classList.contains('active')) {
+            document.body.style.backgroundImage = "url('/images/exirs.jpg')";
+        }
+        else if (snacks.classList.contains('active')) {
+            document.body.style.backgroundImage = "url('/images/snacks.jpg')";
+        }
+        else if (shakesAndIceCreams.classList.contains('active')) {
+            document.body.style.backgroundImage = "url('/images/shakesandincecreams.jpg')";
+        }
+        else if (mocktales.classList.contains('active')) {
+            document.body.style.backgroundImage = "url('/images/mocktales.jpg')";
+        }
+        else if (punches.classList.contains('active')) {
+            document.body.style.backgroundImage = "url('/images/punches.jpg')";
+        }
+        else if (smothies.classList.contains('active')) {
+            document.body.style.backgroundImage = "url('/images/smothies.jpg')";
+        }
+        else {
+            document.body.style.backgroundImage = "none";
+        }
+    };
 
     const togglers = document.querySelectorAll('.nav-toggler');
     const collapsibles = document.querySelectorAll('.collapse');
     const logo = document.getElementById('logo');
 
-    function toggleImage(toggler) {
-
-    }
-
     togglers.forEach(function (toggler) {
         toggler.addEventListener('click', () => {
             toggler.classList.toggle('active');
             let target = document.querySelector(toggler.getAttribute('data-bs-target'));
-
-            const bgImage = toggler.getAttribute('data-bg');
-            if (bgImage) {
-                body.style.setProperty('--bg-image', `url("/images/${bgImage}")`);
-            }
 
             collapsibles.forEach(collapsible => {
                 togglers.forEach(t => {
@@ -41,16 +66,11 @@
                 collapsible.addEventListener('shown.bs.collapse', function () {
                     logo.classList.remove('up');
                     logo.classList.add('down');
-                    let imageUrl = `url('/images/${toggler.dataset.bg}')`;
-                    body.style.setProperty('--bg-image', imageUrl);
-                    body.classList.add('has-bg');
                 });
 
                 collapsible.addEventListener('hidden.bs.collapse', function () {
                     logo.classList.remove('down');
                     logo.classList.add('up');
-                    body.classList.remove('has-bg');
-                    body.style.removeProperty('--bg-image');
                 });
             });
         });
