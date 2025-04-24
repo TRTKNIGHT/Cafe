@@ -3,7 +3,7 @@
   padding: 0;
   overflow-x: hidden;
   font-family: 'Vazir', sans-serif;
-  background-color: #6f4e37;
+  background-color: #0d0d0d;
   position: relative;
   min-height: 100vh;
   z-index: 0;
@@ -20,8 +20,18 @@ body .footer-wrapper {
     width: 100%;
     line-height: 2rem;
     height: 2rem;
-    background-color: #f1e5d8;
-    color: #6f4e37;
+    background-color: #ff8c00;
+    color: #0d0d0d;
+}
+
+#top-container {
+    margin: 0;
+    padding-right: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+#coffeegeneLogo {
+    color: #ff8c00;
 }
 
 .footer-wrapper footer {
@@ -38,14 +48,19 @@ footer h4 {
     margin: 0;
 }
 
+.nav-pills {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
 a {
-    color: #f8f6f0;
+    color: #ff8c00;
 }
 
 a:hover,
 a:focus,
 a:active {
-    color: #f8f6f0;
+    color: #ff8c00;
 }
 
 .scroll-section {
@@ -61,7 +76,7 @@ a:active {
 }
 
 i.fa-heart {
-    color: #f8f6f0;
+    color: #ff8c00;
     font-size: 1.5rem;
 }
 
@@ -89,53 +104,9 @@ i.fa-heart {
     padding: 15px;
 }
 
-.welcome-wrapper .logo {
-    text-align: center;
-    padding: 20px;
-}
-
-.welcome-wrapper .logo i {
-    font-size: 3rem;
-}
-
-.welcome-wrapper .content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #f8f6f0;
-    height: 60vh;
-    padding: 20px;
-    gap: 10px;
-}
-
-.welcome-wrapper .content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.welcome-wrapper .redirect-btn {
-    padding: 0.75rem 1rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.welcome-wrapper .redirect-btn a {
-    background-color: #f1e5d8;
-    color: #6f4e37;
-    margin-left: 3px;
-    margin-right: 3px;
-    padding: 15px;
-    font-size: 1.25rem;
-}
-
 .nav-toggler {
-    background-color: #f1e5d8;
-    color: #6f4e37;
+    background-color: #ffa500;
+    color: #0d0d0d;
     margin-left: 3px;
     margin-right: 3px;
     font-size: 1.1rem;
@@ -152,14 +123,10 @@ i.fa-heart {
 }
 
 .nav-toggler.active {
-    background-color: #f1e5d8;
-    color: #6f4e37;
+    background-color: #ff8c00;
+    color: #0d0d0d;
     margin-left: 3px;
     margin-right: 3px;
-}
-
-.nav-toggler:hover {
-    background-color: #f1e5d8;
 }
 
 .col-7.col-md-9 {
@@ -170,9 +137,9 @@ i.fa-heart {
 .card {
     position: relative;
     width: 100%;
-    background-color: #6f4e37;
-    border: 1px solid #f8f6f0;
-    color: #f8f6f0;
+    background-color: #0d0d0d;
+    border: 1px solid #ff8c00;
+    color: #ffffff;
     position: relative;
     margin: 1%;
     font-family: sans-serif;
@@ -185,10 +152,8 @@ i.fa-heart {
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0.8rem;
-    padding-right: 0;
+    padding: 0;
     min-width: 0;
-    margin-bottom: 0;
 }
 
 .card .card-title {
@@ -197,10 +162,6 @@ i.fa-heart {
     margin-bottom: 0.5rem;
     text-align: right;
     letter-spacing: normal;
-}
-
-.card .image-container img {
-    height: 100%;
 }
 
 .row .col-8 {
@@ -227,6 +188,14 @@ i.fa-heart {
   height: auto;
 }
 
+  .image-container img {
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      height: 75%;
+      margin: auto;
+      padding: 0.5rem;
+  }
+
 #logo.up {
   top: 10px;
   transform: translate(-50%, 0);
@@ -242,7 +211,6 @@ i.fa-heart {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 30px;
 }
 
 .desc-container {
@@ -269,16 +237,16 @@ i.fa-heart {
       gap: normal;
       margin-bottom: 50px;
   }
-
-  .item-price {
-      padding-left: 30px;
-  }
 }
 
 @media (max-width: 992px) {
   .image-container img {
     margin-left: 10px;
     padding: 10px;
+  }
+
+  .nav-pills .nav-toggler {
+      min-width: 20%;
   }
 
   h6.card-title {
@@ -293,6 +261,10 @@ i.fa-heart {
 @media (max-width: 768px) {
   .card {
       height: 160px;
+  }
+
+  .nav-pills .nav-toggler {
+      min-width: 30%;
   }
 
   .card .image-container {
@@ -316,9 +288,8 @@ i.fa-heart {
 }
 
   .card .card-body {
-    padding: 0.8rem;
-    padding-bottom: 0;
-    padding-right: 0;
+    padding: 0;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     min-width: 0;
   }
@@ -331,10 +302,6 @@ i.fa-heart {
     margin-left: 5px;
     padding: 8px;
   }
-
-  .item-price {
-      padding-left: 15px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -343,11 +310,14 @@ i.fa-heart {
   }
 
   .card .card-body {
-    padding: 0.8rem;
-    padding-bottom: 0;
-    padding-right: 0;
+    padding: 0;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     min-width: 0;
+  }
+
+  .nav-pills .nav-toggler {
+      min-width: 35%;
   }
 
   h6.card-title {
@@ -370,6 +340,8 @@ i.fa-heart {
   .card .image-container {
       height: 160px;
       padding-left: 9px;
+      display: flex;
+      align-items: center;
   }
 
   #logo {
@@ -380,9 +352,5 @@ i.fa-heart {
   .image-container img {
     margin-left: 2px;
     padding: 0;
-  }
-
-  .item-price {
-      padding-left: 9px;
   }
 }

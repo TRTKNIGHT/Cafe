@@ -3,6 +3,12 @@
     const collapsibles = document.querySelectorAll('.collapse');
     const logo = document.getElementById('logo');
 
+    const coffeeMenu = document.getElementById('coffeeBtn');
+    const coffee = document.getElementById('coffee');
+
+    coffeeMenu.classList.add('active');
+    coffee.classList.add('show');
+
     togglers.forEach(function (toggler) {
         toggler.addEventListener('click', () => {
             toggler.classList.toggle('active');
