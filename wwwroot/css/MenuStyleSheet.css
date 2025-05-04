@@ -1,4 +1,12 @@
-﻿html, body {
+﻿@font-face {
+    font-family: 'Vazir';
+    src: url('/fonts/Vazir.ttf') format('truetype'),
+         url('/fonts/Vazir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
